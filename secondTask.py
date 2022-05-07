@@ -33,7 +33,8 @@ class TalkingClock(object):
         if self.mm==0:  # for case 1: 1:00 One o'clock
             string = self.time2WordConvert(self.hh)
             readAs='O\'clock'
-            minute=None
+            minute=""
+            return(hour + ' ' + readAs)
         elif self.mm<=30: # for case 2: 13:05 Five past one
             if self.mm==30: # for case 2.1:	13:30 Half past one
                 minute='Half'
